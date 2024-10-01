@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Tokens</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Submit Your Tokens</h1>
+    <form action="/submit_tokens" method="POST">
+      <label for="user_id">User ID:</label><br />
+      <input type="text" id="user_id" name="user_id" required /><br /><br />
+
+      <label for="git_username">GitHub Username:</label><br />
+      <input
+        type="text"
+        id="git_username"
+        name="git_username"
+        required
+      /><br /><br />
+
+      <label for="git_token">GitHub Token:</label><br />
+      <input type="text" id="git_token" name="git_token" required /><br /><br />
+
+      <label for="git_repo">GitHub Repository URL:</label><br />
+      <input
+        type="text"
+        id="git_repo"
+        name="git_repo"
+        required
+        placeholder="https://github.com/username/repository"
+      /><br /><br />
+
+      <label for="git_branch">GitHub Branch (optional):</label><br />
+      <input
+        type="text"
+        id="git_branch"
+        name="git_branch"
+        placeholder="main"
+        value="main"
+      /><br /><br />
+
+      <label for="docker_username">DockerHub Username:</label><br />
+      <input
+        type="text"
+        id="docker_username"
+        name="docker_username"
+        required
+      /><br /><br />
+
+      <label for="docker_token">DockerHub Token:</label><br />
+      <input
+        type="text"
+        id="docker_token"
+        name="docker_token"
+        required
+      /><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
